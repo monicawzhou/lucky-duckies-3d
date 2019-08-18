@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://threejsfundamentals.org/threejs/threejs-game-load-models.html -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Three.js - Game - Load Models</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+      #c {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      #loading {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: xx-large;
+        font-family: sans-serif;
+      }
+      #loading > div > div {
+        padding: 2px;
+      }
+      .progress {
+        width: 50vw;
+        border: 1px solid black;
+      }
+      #progressbar {
+        width: 0%;
+        transition: width ease-out 0.5s;
+        height: 1em;
+        background-color: #888;
+        background-image: linear-gradient(
+          -45deg,
+          rgba(255, 255, 255, 0.5) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, 0.5) 50%,
+          rgba(255, 255, 255, 0.5) 75%,
+          transparent 75%,
+          transparent
+        );
+        background-size: 50px 50px;
+        animation: progressanim 2s linear infinite;
+      }
+
+      @keyframes progressanim {
+        0% {
+          background-position: 50px 50px;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="c" width="1275" height="598"></canvas>
+    <div id="loading" style="display: none;">
+      <div>
+        <div>...loading...</div>
+        <div class="progress">
+          <div id="progressbar" style="width: 100%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./loadModels_files/three.min.js"></script>
+    <script src="./loadModels_files/OrbitControls.js"></script>
+    <script src="./loadModels_files/GLTFLoader.js"></script>
+    <script src="./loadModels_files/SkeletonUtils.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
