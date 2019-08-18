@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://threejsfundamentals.org/threejs/threejs-game-player-input.html -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Player Input</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="c" tabindex="1" width="1280" height="597"></canvas>
+    <div id="ui">
+      <div id="left"><img src="./playerInput_files/left.svg" /></div>
+      <div style="flex: 0 0 40px;"></div>
+      <div id="right"><img src="./playerInput_files/right.svg" /></div>
+    </div>
+    <div id="loading" style="display: none;">
+      <div>
+        <div>...loading...</div>
+        <div class="progress">
+          <div id="progressbar" style="width: 100%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./playerInput_files/three.min.js"></script>
+    <script src="./playerInput_files/OrbitControls.js"></script>
+    <script src="./playerInput_files/GLTFLoader.js"></script>
+    <script src="./playerInput_files/SkeletonUtils.js"></script>
+    <script src="mainPlayerInput.js"></script>
+
+  </body>
+</html>
